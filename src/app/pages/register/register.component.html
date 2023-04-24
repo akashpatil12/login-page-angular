@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-lg p-5 mt-5 mb-5">
+                <h1 class="text-center">Welcome User</h1><hr>
+                <div [ngClass]="className" role="alert">
+                  {{message}} <a routerLink="/login" style="cursor:pointer" >Login Here</a>
+                  </div>
+                <form [formGroup]="signupForm" class="text-left">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" class="form-control" placeholder="UserName" formControlName="Username" formControlName="Name" >
+                        <label>Email</label>
+                        <input type="email" class="form-control" placeholder="Email" formControlName="email" formControlName="email">
+                        <label>Password</label>
+                        <input type="password" class="form-control" placeholder="*******" formControlName="password" formControlName="password">
+                    </div><br>
+                    <button class="btn btn-outline-primary"(click)="signUp()">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
